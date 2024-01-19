@@ -1,9 +1,15 @@
 import React from 'react'
-import clasess from './Home.module.scss'
+import Header from '../../components/Header'
+import Badge from '../../components/Badge'
+import CategoriesBlock from '../../components/CategoriesBlock'
 
 const Home = () => {
   return (
-    <div className={clasess['root']}>Home</div>
+    <>
+      <Header />
+      <Badge />
+      <CategoriesBlock />
+    </>
   )
 }
 
