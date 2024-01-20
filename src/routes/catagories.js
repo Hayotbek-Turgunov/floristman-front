@@ -8,11 +8,6 @@ import services from '../images/catagory-images/services.png'
 import sweets from '../images/catagory-images/sweets.png'
 
 
-
-
-
-
-
 export const catagories = [
   {
     text: 'Flowers',
