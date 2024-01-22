@@ -1,5 +1,6 @@
 .card {
   padding: 15px;
+  position: relative;
 
   &__title {
     font-weight: 700;
@@ -37,12 +38,22 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 50px;
-    color: #fff;
+    color: green;
+    background-color: white;
     width: 100%;
-    border: none;
     outline: none;
     cursor: pointer;
+    border: 3px green solid;
+    margin-top: 24px;
+    transition: 0.5s color, 0.5s background-color;
+
+    &_selected {
+      background-color: green;
+      color: white;
+    }
   }
+
+
 
 
 
