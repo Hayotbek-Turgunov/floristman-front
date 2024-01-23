@@ -6,11 +6,14 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { catagories } from '../../routes/catagories'
 import CategoriesBlock from '../CategoriesBlock';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
 
-console.log(catagories);
 const Header = () => {
+
+  const location = useLocation();
+
   return (
     <header className={classes['header']}>
       <Container className={classes['header__container']}>
@@ -27,7 +30,7 @@ const Header = () => {
             catagories.map(link =>
             (
               <li key={link.text}>
-                <Link className={classes['header__link']} to={link.link}>{link.text}</Link>
+                <Link className={classNames(classes['header__link'], location.pathname === link ? classes['header__link_active'] : '')} to={link.link}>{link.text}</Link>
               </li>
             ))}
         </ul>

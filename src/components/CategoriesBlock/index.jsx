@@ -9,7 +9,7 @@ const CategoriesBlock = () => {
     <Container className={classes['categories']}>
       {
         catagories.map(category => (
-          <div key={catagories.text} className={classes['categories__item']}>
+          <div key={category.text} className={classes['categories__item']}>
             <img className={classes['categories__img']} src={category.image} alt={category.text} />
             <Link to={category.link} className={classes['categories__button']}>{category.text}</Link>
           </div>
