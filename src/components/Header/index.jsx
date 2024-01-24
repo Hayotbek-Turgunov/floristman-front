@@ -5,7 +5,6 @@ import classes from './Header.module.scss'
 import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { catagories } from '../../routes/catagories'
-import CategoriesBlock from '../CategoriesBlock';
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
