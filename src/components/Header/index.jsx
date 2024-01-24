@@ -19,8 +19,11 @@ const Header = () => {
         <Link className={classes['header__logo']} to={'/'}>
           <img src={second} alt="Floristman" />
         </Link>
+
         <MdOutlineShoppingBag className={classes['header__heart']} />
-        <CiHeart className={classes['header__bag']} />
+        <Link to='/favorite'>
+          <CiHeart className={classes['header__bag']} />
+        </Link>
       </Container>
 
       <Container>

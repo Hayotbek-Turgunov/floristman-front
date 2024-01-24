@@ -7,12 +7,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import './DiscountCarousel.module.scss'
+import { useSelector } from 'react-redux';
+
 
 
 
 const DiscountCarousel = () => {
 
   const [data, setData] = useState([])
+  const { like } = useSelector(state => state)
 
 
   useEffect(() => {
@@ -35,8 +38,8 @@ const DiscountCarousel = () => {
           modules={[Navigation]}
         >
           {data.map(item => (
-            <SwiperSlide>
-              <ProductCard key={item.id} data={item} />
+            <SwiperSlide key={item.id}>
+              <ProductCard data={item} liked={item.id in like} />
             </SwiperSlide>
           ))}
         </Swiper>

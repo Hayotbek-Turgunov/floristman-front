@@ -4,11 +4,14 @@ import { useParams } from 'react-router-dom'
 import Container from '../../layout/Container'
 import ProductCard from '../../components/ProductCard'
 import classes from './Category.module.scss'
+import { useSelector } from 'react-redux'
+import Title from '../../components/Title/index'
 
 
 const Category = () => {
   const { type } = useParams()
   const [data, setData] = useState(null)
+  const { like } = useSelector(state => state)
 
 
 
@@ -26,7 +29,7 @@ const Category = () => {
     <>
       <Header />
       <Container className={classes['cards']}>
-        {data && data.map(card => <ProductCard data={card} key={card.id} className={classes['card-item']} />
+        {data && data.map(card => <ProductCard data={card} key={card.id} className={classes['card-item']} liked={card.id in like} />
         )}
       </Container>
     </>
